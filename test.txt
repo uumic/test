@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【マンガレーベル名】公式サイト</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        /* アニメーション用のカスタムCSS */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.6s; }
+        .manga-card:hover .manga-overlay {
+            opacity: 1;
+        }
+        .manga-card:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+    <!-- ヒーローセクション -->
+    <header class="relative min-h-[60vh] md:min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-center" style="background-image: url('https://placehold.co/1600x900/1a202c/ffffff?text=レーベルのイメージビジュアル');">
+        <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div class="relative z-10 p-8 max-w-4xl mx-auto">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-wider leading-tight mb-4 fade-in-up" style="text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                【ここにレーベルのキャッチコピー】
+            </h1>
+            <p class="text-lg md:text-2xl font-bold mb-8 max-w-2xl mx-auto fade-in-up delay-1">
+                【レーベルのコンセプトや紹介文。例：心揺さぶる物語が、ここにある。】
+            </p>
+            <a href="#lineup" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold text-xl py-4 px-10 rounded-full shadow-lg transform hover:scale-105 transition-transform duration-300 inline-block fade-in-up delay-2">
+                作品ラインナップを見る
+            </a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <!-- 注目作品セクション -->
+        <section id="featured" class="mb-20 md:mb-32">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 border-b-4 border-yellow-500 inline-block pb-2">注目作品</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- 注目作品 1 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x800/555/fff?text=マンガ1の書影" alt="マンガ1" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">【マンガタイトル 1】</h3>
+                        <p class="text-gray-300 mb-4">【作品の簡単な紹介文。読者の興味を引くように。】</p>
+                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md inline-block transition-colors duration-300">詳しく見る</a>
+                    </div>
+                </div>
+                <!-- 注目作品 2 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x800/555/fff?text=マンガ2の書影" alt="マンガ2" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">【マンガタイトル 2】</h3>
+                        <p class="text-gray-300 mb-4">【作品の簡単な紹介文。読者の興味を引くように。】</p>
+                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md inline-block transition-colors duration-300">詳しく見る</a>
+                    </div>
+                </div>
+                <!-- 注目作品 3 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden group">
+                    <img src="https://placehold.co/600x800/555/fff?text=マンガ3の書影" alt="マンガ3" class="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-yellow-400 mb-2">【マンガタイトル 3】</h3>
+                        <p class="text-gray-300 mb-4">【作品の簡単な紹介文。読者の興味を引くように。】</p>
+                        <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded-md inline-block transition-colors duration-300">詳しく見る</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 作品ラインナップセクション -->
+        <section id="lineup">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 border-b-4 border-yellow-500 inline-block pb-2">作品ラインナップ</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6 md:gap-8">
+                <!-- 作品カード (このブロックをコピーして作品を追加) -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card">
+                    <a href="#">
+                        <img src="https://placehold.co/400x600/333/ccc?text=作品A" alt="作品A" class="w-full h-auto object-cover transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay">
+                            <div>
+                                <h3 class="font-bold text-lg">【作品A】</h3>
+                                <p class="text-sm text-gray-300">【作者名】</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 作品カード -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card">
+                    <a href="#">
+                        <img src="https://placehold.co/400x600/333/ccc?text=作品B" alt="作品B" class="w-full h-auto object-cover transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay">
+                            <div>
+                                <h3 class="font-bold text-lg">【作品B】</h3>
+                                <p class="text-sm text-gray-300">【作者名】</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- 作品カード -->
+                <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card">
+                    <a href="#">
+                        <img src="https://placehold.co/400x600/333/ccc?text=作品C" alt="作品C" class="w-full h-auto object-cover transition-transform duration-300">
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay">
+                            <div>
+                                <h3 class="font-bold text-lg">【作品C】</h3>
+                                <p class="text-sm text-gray-300">【作者名】</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- ...必要なだけ作品カードを追加... -->
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品D" alt="作品D" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品D】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品E" alt="作品E" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品E】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品F" alt="作品F" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品F】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品G" alt="作品G" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品G】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品H" alt="作品H" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品H】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品I" alt="作品I" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品I】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品J" alt="作品J" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品J】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品K" alt="作品K" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品K】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+                 <div class="relative rounded-lg overflow-hidden shadow-lg group manga-card"><a href="#"><img src="https://placehold.co/400x600/333/ccc?text=作品L" alt="作品L" class="w-full h-auto object-cover transition-transform duration-300"><div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 opacity-0 transition-opacity duration-300 manga-overlay"><div><h3 class="font-bold text-lg">【作品L】</h3><p class="text-sm text-gray-300">【作者名】</p></div></div></a></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="bg-gray-800 mt-20 md:mt-32 py-8 text-center text-gray-400">
+        <div class="container mx-auto">
+            <p class="mb-2">【レーベル名】</p>
+            <p>&copy; 2025 【出版社名】</p>
+        </div>
+    </footer>
+
+</body>
+</html>
